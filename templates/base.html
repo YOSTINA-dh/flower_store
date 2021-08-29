@@ -16,12 +16,16 @@
     <!-- Bootstrap CSS -->
      {% block corecss %}
        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+       <link rel="preconnect" href="https://fonts.gstatic.com">
+       <linkhref="https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Lato:wght@100;300;700;900&family=Poppins:wght@100;200;300;400;500;700&family=Prata&family=Sacramento&display=swap" rel="stylesheet">
+       <link rel="stylesheet" href="{% static 'css/base.css' %}">
      {% endblock %}
      
      {% block extra_css %}
      {% endblock %}
 
      {% block corejs %}
+        <script src="https://kit.fontawesome.com/a2628a3930.js" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
@@ -57,7 +61,7 @@
 
 
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-                <form method="GET" action="{% url 'products' %}">
+                <form method="GET" action="">
                     <div class="input-group w-100">
                         <input class="form-control border border-black rounded-0" type="text" name="q"
                             placeholder="Search Bouquets">
@@ -86,9 +90,9 @@
                         <div class="dropdown-menu border-0" aria-labelledby="user-options">
                             {% if request.user.is_authenticated %}
                             {% if request.user.is_superuser %}
-                            <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
+                            <a href="" class="dropdown-item">Product Management</a>
                             {% endif %}
-                            <a href="{% url 'profile' %}" class="dropdown-item">Profile</a>
+                            <a href="" class="dropdown-item">Profile</a>
                             <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
                             {% else %}
                             <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
@@ -98,7 +102,7 @@
                     </li>
                     <li class="list-inline-item">
                         <a class="{% if grand_total %}text-black {% else %}text-black{% endif %} nav-link"
-                            href="{% url 'view_bag' %}">
+                            href="">
                             <div class="text-center">
                                 <div><i class="fas fa-shopping-bag fa-lg"></i></div>
                                 <p class="my-0">

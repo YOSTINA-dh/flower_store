@@ -1,0 +1,55 @@
+<div class="collapse navbar-collapse" id="main-nav">
+    <ul class="navbar-nav w-auto mx-auto">
+
+
+
+        <li class="nav-item dropdown">
+            <a class="logo-font  nav-link text-black mr-5" href="#" id="clothing-link" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false" style="letter-spacing: 3px;">
+                 BOUQUETS
+            </a>
+            <a href="{% url 'products' %}?category=birthday bouquets" class="dropdown-item">Birthday Bouquets</a>
+                <a href="{% url 'products' %}?category=romantic boxes" class="dropdown-item">Romantic Boxes</a>
+                <a href="{% url 'products' %}?category=flower bags" class="dropdown-item">Flower Bags</a>
+                <a href="{% url 'products' %}?category=roses" class="dropdown-item">Roses</a>
+                <a href="{% url 'products' %}?category=roses" class="dropdown-item">Chocolates</a>
+            </div>
+        </li>
+
+
+        <li class="nav-item dropdown">
+            <a class="logo-font  nav-link text-black mr-5" href="#" id="all-products-link" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false" style="letter-spacing: 3px;">
+                SORT PRODUCTS
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
+                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
+                <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
+                <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
+                <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
+            </div>
+        </li>
+
+
+        <li class="nav-item">
+            <a class="logo-font  nav-link text-black mr-5" href="{% url 'bouquets_tips' %}" id="home-link"
+                aria-haspopup="true" aria-expanded="false" style="letter-spacing: 3px;">
+                BOUQUETS TIPS
+            </a>
+
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="logo-font  nav-link text-black" href="#" id="specials-link" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false" style="letter-spacing: 3px;">
+                GIFTS
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="e-gift">
+
+                <a href="{% url 'products' %}?category=egift" class="dropdown-item">E-Gift</a>
+            </div>
+        </li>
+
+
+    </ul>
+</div>
