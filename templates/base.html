@@ -43,6 +43,7 @@
         <!----BANNER FREE SHIPPING-->
 
         <div class="row black-banner py-1" style="background-color: black;">
+         <form method="GET" action="{% url 'products' %}">
             <div class="col-12">
                 <p class="text-center text-white">
                     <strong> &#9889;FREE SHIPPING ON 50£ ORDERS!&#9889; </strong>
@@ -61,7 +62,7 @@
 
 
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-                <form method="GET" action="">
+                  <form method="GET" action="{% url 'products' %}">
                     <div class="input-group w-100">
                         <input class="form-control border border-black rounded-0" type="text" name="q"
                             placeholder="Search Bouquets">
