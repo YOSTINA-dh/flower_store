@@ -1,6 +1,46 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
 {% block content %}
-    <h1 class="display-4 text-success">It works!</h1>
+
+<!-- HERO IMAGE -->
+
+<!-- SHOW PRODUCTS SECTION-->
+<!-- Portfolio Grid-->
+
+<!-- SHOW PRODUCTS SECTION-->
+<!-- Portfolio Grid-->
+
+<div class="index" style="background-image: url('https://i.ibb.co/VxXzKrv/BB45-16.jpg'); 
+background-size: cover;
+  height: calc(100vh - 164px);
+  display: flex;
+  align-items: center;
+  justify-content: center;">
+    <div class="container">
+        <div class="row">
+            <div class="col-7 col-md-6 my-auto">
+                <h1 class="text-white" style="font-family: 'prata', sans-serif;">
+                    BROWSE OUR BOUQUETS
+                </h1>
+                <p></p>
+                <div class="my-4">
+                    <h4>
+                        <a href="{% url 'products' %}" class="shop-now-button btn rounded-0 text-uppercase py-2">Shop
+                            Now</a>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 {% endblock %}
